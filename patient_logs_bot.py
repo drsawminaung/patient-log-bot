@@ -10,8 +10,7 @@ from google.oauth2.service_account import Credentials
 # Load sensitive data ONLY from environment variables (no fallback values)
 TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
 SHEET_KEY = os.getenv('GOOGLE_SHEET_KEY')
-CREDENTIALS_FILE = '# Ignore the Google Cloud credentials file to keep secrets out of version control.
-credentials.json
+CREDENTIALS_FILE = 'credentials.json'
 # Add other common secret file names
 *.env
 *.pem
@@ -96,3 +95,4 @@ if __name__ == '__main__':
         app.run_polling()
     else:
         logger.error("Bot could not start due to configuration errors.")
+
